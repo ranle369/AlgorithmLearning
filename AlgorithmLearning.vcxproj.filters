@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Al1归并.cpp">
+    <ClCompile Include="AL1归并.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AL2快排3.0.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

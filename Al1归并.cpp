@@ -4,22 +4,27 @@ using namespace std;
 
 void merge(vector<int> arr,int L,int Mid,int R) {
 
+	vector<int> helpArr(R - L + 1);
 	int help = 0;
 	int p1 = L;
 	int p2 = Mid;
 
 	while (p1 <= Mid && p2 <= R) {
-		arr[help++ + L] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
+		helpArr[help++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
 	}
 
 	while (p1 <= Mid) {
-		arr[help++ + L] = arr[p1++];
+		helpArr[help++] = arr[p1++];
 	}
 
 	while (p2 <= R) {
-		arr[help++ + L] = arr[p2++];
+		helpArr[help++] = arr[p2++];
 	}
 
+	for (int i = 0; i < R - L + 1; i++)
+	{
+		arr[L + i] = helpArr[i];
+	}
 }
 
 void guiBing(vector<int> arr,int L,int R) {
