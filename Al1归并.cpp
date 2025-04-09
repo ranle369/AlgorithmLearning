@@ -26,9 +26,15 @@ void merge(vector<int> arr,int L,int Mid,int R) {
 	{
 		arr[L + i] = helpArr[i];
 	}
+
+	return;
 }
 
 void guiBing(vector<int> arr,int L,int R) {
+
+	if (L == R) {
+		return;
+	}
 
 	int Mid = L + ((R - L) >> 1);
 

@@ -21,5 +21,11 @@
     <ClCompile Include="AL2快排3.0.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="A1测试.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AL3堆排.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

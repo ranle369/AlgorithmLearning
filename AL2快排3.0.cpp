@@ -2,6 +2,8 @@
 #include<math.h>
 using namespace std;
 
+
+int* parition(int* p, int L, int R);
 void quickSort(int* arr,int L,int R) {
 
 	if (L == R) {
