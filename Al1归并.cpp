@@ -15,6 +15,7 @@ void merge(vector<int> arr,int L,int Mid,int R) {
 
 	while (p1 <= Mid) {
 		helpArr[help++] = arr[p1++];
+
 	}
 
 	while (p2 <= R) {
