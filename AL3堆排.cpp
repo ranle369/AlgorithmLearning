@@ -12,8 +12,14 @@ void heapSort(int *arr) {
 	int last = heapSize - 1;
 
 	//制造一个大根堆
-	for (int i = 0; i < heapSize; i++) {
-		heapInser(arr,i);
+	//这个建立大根堆过程是从头开始的，时间会很慢
+	//for (int i = 0; i < heapSize; i++) {
+	//	heapInser(arr,i);
+	//}
+
+	//第二种方法建立大根堆,这个建立方法是从尾部开始，较快
+	for (int i = last; i > 0; i--) {
+		heapify(arr, heapSize, last);
 	}
 
 	//大根堆制造好了，开始排序了
