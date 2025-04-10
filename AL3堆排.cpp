@@ -13,7 +13,7 @@ void heapSort(int *arr) {
 
 	//制造一个大根堆
 	for (int i = 0; i < heapSize; i++) {
-		heapify(arr, heapSize, i);
+		heapInser(arr,i);
 	}
 
 	//大根堆制造好了，开始排序了
@@ -24,6 +24,13 @@ void heapSort(int *arr) {
 		swap(arr[0], arr[heapSize - 1]);
 	}
 
+}
+
+void heapInser(int* arr, int index) {
+	while (arr[index] > arr[(index - 1) / 2]) {
+		swap(arr[index], arr[(index - 1) / 2]);
+		index = (index - 1) / 2;
+	}
 }
 
 void heapify(int *arr, int heapSize, int index) {
