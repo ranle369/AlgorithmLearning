@@ -1,7 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void heapSort(int *arr, int heapSize, int index) {
+void heapSort(int *arr) {
+
+	int heapSize = sizeof(arr) / sizeof(arr[0]);
+
+	if (heapSize < 2 || arr == NULL) {
+		return;
+	}
+
+	int last = heapSize - 1;
+
+	//制造一个大根堆
+	for (int i = 0; i < heapSize; i++) {
+		heapify(arr, heapSize, i);
+	}
+
+	//大根堆制造好了，开始排序了
+	swap(arr[0], arr[last]);
+
+	while (--heapSize > 0) {
+		heapify(arr, heapSize, 0);
+		swap(arr[0], arr[heapSize - 1]);
+	}
+
+}
+
+void heapify(int *arr, int heapSize, int index) {
 
 	int leftChild = index * 2 + 1;
 	int maxIndex;
