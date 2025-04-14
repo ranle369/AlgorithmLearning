@@ -31,7 +31,7 @@ int* parition(int *p ,int L ,int R) {
 	int arr[2];
 
 
-	while (L < R) {
+	while (L < more) {
 		if (p[L]<key)
 		{
 			p[++less] = p[L++];
