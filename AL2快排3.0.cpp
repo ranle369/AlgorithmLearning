@@ -34,10 +34,10 @@ int* parition(int *p ,int L ,int R) {
 	while (L < more) {
 		if (p[L]<key)
 		{
-			p[++less] = p[L++];
+			swap(arr[++less], arr[L++]);
 		}
 		else if (p[L] > key) {
-			p[--more] = p[L];
+			swap(arr[--more], arr[L]);
 		}
 		else {
 			L++;
