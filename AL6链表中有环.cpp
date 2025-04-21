@@ -59,15 +59,15 @@ Node* findLoopNodeN(Node* head) {
 	}
 
 	//初始化自定义哈希set需要给，自定义对象，自定义哈希函数，和相等时候的比较方法
-	unordered_set<Node*, NodeHash, NodeEqueal> mySet;
+	unordered_set<Node, NodeHash, NodeEqueal> mySet;
 
 	Node* node = head;
 
 	while (node != NULL) {
-		auto find = mySet.find(node);
+		auto find = mySet.find(*node);
 		if (mySet.empty() || find == mySet.end())
 		{
-			mySet.insert(node);
+			mySet.insert(*node);
 		}
 
 		if (find != mySet.end()) {

@@ -6,6 +6,8 @@ typedef struct Node {
 	Node* Next;
 }Node;
 
+Node* findLoopNode(Node* head);
+
 //两个带环链表，链表1和链表2.可能两链表相交在一起，也可能不相交在一起。
 //相交在一起时候，可以在同一个node相交，也可能在不同node相交,然后找出第一个相重合的第一个节点
 //head1：链表1，loop1：入环节点1，head2：链表2，loop2：入环节点2
