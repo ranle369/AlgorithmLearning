@@ -89,7 +89,7 @@ void centerOrder(Node<T>* head) {
 			}
 		}*/
 
-		if (head != NULL)
+		/*if (head != NULL)
 		{
 			stack->push(head);
 			head = head->left;
@@ -100,6 +100,15 @@ void centerOrder(Node<T>* head) {
 			stack->pop();
 			cout << head->data << endl;
 			head = head->right;
+		}*/
+
+		if (node->left != NULL) {
+			stack->push(node->left);
+		}
+		else if (node->right != NULL) {
+			stack->pop();
+			stack->push(node->right);
+			cout << node->data << endl;
 		}
 	}
 
