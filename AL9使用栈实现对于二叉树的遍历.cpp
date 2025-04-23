@@ -31,7 +31,7 @@ void preOrderByStack(Node<int>& head) {
 	}
 }
 
-//先序遍历，头左右，进栈1顺序头右左，出栈2顺序左右头
+//后序遍历，头左右，进栈1顺序头右左，出栈2顺序左右头
 void postOrder(Node<int>& head) {
 	stack<Node<int>> stack1;
 	stack<Node<int>> stack2;
@@ -104,10 +104,16 @@ void centerOrder(Node<T>* head) {
 
 		if (node->left != NULL) {
 			stack->push(node->left);
+			node = node->left;
 		}
 		else if (node->right != NULL) {
 			stack->pop();
 			stack->push(node->right);
+			cout << node->data << endl;
+			node = node->right;
+		}
+		else {
+			stack->pop();
 			cout << node->data << endl;
 		}
 	}
